@@ -21,8 +21,6 @@ print(accuracy)
 scaler = StandardScaler()
 train_data_scaled = scaler.fit_transform(train_data)
 test_data_scaled = scaler.transform(test_data)
-#train_target_scaled = scaler.fit_transform(train_target)
-#test_target_scaled = scaler.fit_transform(test_target)
 
 perceptron.fit(train_data_scaled, train_target)
 predictions_scaled = perceptron.predict(test_data_scaled)
